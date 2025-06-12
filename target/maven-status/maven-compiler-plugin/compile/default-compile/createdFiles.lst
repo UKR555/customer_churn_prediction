@@ -1,0 +1,7 @@
+com\grocery\churn\service\ChurnPredictionService.class
+com\grocery\churn\model\Customer.class
+com\grocery\churn\controller\ChurnPredictionController.class
+com\grocery\churn\model\PredictionRequest.class
+com\grocery\churn\GroceryChurnApplication.class
+com\grocery\churn\util\CSVDataLoader.class
+com\grocery\churn\model\PredictionResult.class

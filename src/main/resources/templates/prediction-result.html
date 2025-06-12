@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result - Grocery Churn Predictor</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Grocery Churn Predictor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/predict">Predict</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h1 class="mb-4">Churn Prediction Results</h1>
+                
+                <div class="card shadow mb-4">
+                    <div class="card-header" th:classappend="${result.prediction == 'Yes'} ? 'bg-danger text-white' : 'bg-success text-white'">
+                        <h3 class="mb-0">Prediction: 
+                            <span th:text="${result.prediction == 'Yes'} ? 'Customer is Likely to Churn' : 'Customer is Likely to Stay'">
+                                Prediction Result
+                            </span>
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="card-title">Prediction Details</h4>
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th>Prediction</th>
+                                        <td th:text="${result.prediction}">Yes/No</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Churn Probability</th>
+                                        <td th:text="${#numbers.formatPercent(result.probability, 1, 2)}">0%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Risk Category</th>
+                                        <td>
+                                            <span th:text="${result.churnRiskCategory}"
+                                                  th:classappend="${result.churnRiskCategory == 'High'} ? 'badge bg-danger' : 
+                                                                 (${result.churnRiskCategory == 'Medium'} ? 'badge bg-warning text-dark' : 'badge bg-success')">
+                                                Risk Category
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Model Used</th>
+                                        <td th:text="${result.algorithm}">Algorithm</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="card-title">Customer Profile</h4>
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th>Age</th>
+                                        <td th:text="${customer.age}">Age</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Gender</th>
+                                        <td th:text="${customer.gender}">Gender</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Shopping Frequency</th>
+                                        <td th:text="${customer.shoppingFrequency}">Frequency</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Loyalty Card</th>
+                                        <td th:text="${customer.loyaltyCardMember ? 'Yes' : 'No'}">Loyalty</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Days Since Last Purchase</th>
+                                        <td th:text="${customer.daysLastPurchase}">Days</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card shadow mb-4" th:if="${result.prediction == 'Yes'}">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0">Recommended Actions</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-warning">
+                            <h5 class="alert-heading">This customer is at risk of churning!</h5>
+                            <p>Based on our prediction model, this customer profile shows significant risk indicators. 
+                               Consider taking proactive measures to retain them.</p>
+                        </div>
+                        <h5>Suggestions:</h5>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item" th:if="${customer.daysLastPurchase > 20}">
+                                <strong>Reengage:</strong> Customer hasn't shopped in <span th:text="${customer.daysLastPurchase}"></span> days. 
+                                Send a personalized email with a special offer.
+                            </li>
+                            <li class="list-group-item" th:if="${!customer.loyaltyCardMember}">
+                                <strong>Loyalty Program:</strong> Invite customer to join your loyalty program with special incentives.
+                            </li>
+                            <li class="list-group-item" th:if="${customer.complaintsMade > 0}">
+                                <strong>Address Complaints:</strong> Customer has made <span th:text="${customer.complaintsMade}"></span> complaints. 
+                                Reach out to resolve outstanding issues.
+                            </li>
+                            <li class="list-group-item" th:if="${customer.feedbackScore < 4.0}">
+                                <strong>Improve Experience:</strong> Low satisfaction score of <span th:text="${customer.feedbackScore}"></span>. 
+                                Seek feedback on how to improve their shopping experience.
+                            </li>
+                            <li class="list-group-item" th:if="${customer.specialOffersRedeemed < 5}">
+                                <strong>Targeted Offers:</strong> Send personalized offers based on past purchase history.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-4">
+                    <a href="/predict" class="btn btn-primary">Make Another Prediction</a>
+                    <a href="/" class="btn btn-secondary">Return to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-center text-white py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">© 2023 Grocery Churn Predictor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="/webjars/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Grocery Churn Predictor</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Grocery Churn Predictor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/predict">Predict</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h1 class="mb-4">About This Project</h1>
+                
+                <div class="card shadow mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">Grocery Customer Churn Prediction</h2>
+                        <p class="lead">
+                            This application uses machine learning to predict whether grocery store customers are likely to churn
+                            (stop shopping at your store) based on their demographics and shopping behavior.
+                        </p>
+                        
+                        <hr class="my-4">
+                        
+                        <h3>Project Overview</h3>
+                        <p>
+                            Customer churn is a significant challenge for grocery retailers. When customers leave to shop elsewhere, 
+                            it results in lost revenue and increased marketing costs to acquire new customers. Identifying customers 
+                            who are likely to churn before they leave gives retailers the opportunity to intervene with targeted retention strategies.
+                        </p>
+                        
+                        <h3 class="mt-4">Technology Stack</h3>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <h5>Backend</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Java (JDK 11)</li>
+                                    <li class="list-group-item">Spring Boot 2.7.3</li>
+                                    <li class="list-group-item">Weka 3.8.6 (Machine Learning)</li>
+                                    <li class="list-group-item">Maven (Build Tool)</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>Frontend</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Thymeleaf (Server-side Template Engine)</li>
+                                    <li class="list-group-item">Bootstrap 5.2.3 (Responsive UI)</li>
+                                    <li class="list-group-item">HTML/CSS/JavaScript</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <h3 class="mt-4">Machine Learning Models</h3>
+                        <p>
+                            This application evaluates several machine learning algorithms and automatically selects the highest-performing model
+                            for making predictions. The models evaluated include:
+                        </p>
+                        <ul>
+                            <li>Decision Tree (J48)</li>
+                            <li>Random Forest</li>
+                            <li>Naive Bayes</li>
+                            <li>Logistic Regression</li>
+                            <li>Support Vector Machine (SMO)</li>
+                        </ul>
+                        
+                        <h3 class="mt-4">Data Features</h3>
+                        <p>
+                            The model makes predictions based on a variety of customer features, including:
+                        </p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Demographics (age, gender, income)</li>
+                                    <li>Shopping frequency</li>
+                                    <li>Average basket value</li>
+                                    <li>Loyalty program membership</li>
+                                    <li>Online shopping usage</li>
+                                    <li>Days since last purchase</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Total purchase amount</li>
+                                    <li>Store visit frequency</li>
+                                    <li>Complaints made</li>
+                                    <li>Special offers redeemed</li>
+                                    <li>Customer feedback scores</li>
+                                    <li>Preferred payment method and store location</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card shadow mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0">How to Use</h3>
+                    </div>
+                    <div class="card-body">
+                        <ol>
+                            <li class="mb-2">Navigate to the <a href="/predict">Predict</a> page</li>
+                            <li class="mb-2">Enter the customer's demographic and shopping behavior information</li>
+                            <li class="mb-2">Click "Predict Churn" to see the prediction results</li>
+                            <li class="mb-2">Review the prediction outcome and recommended retention actions for at-risk customers</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <a href="/predict" class="btn btn-primary btn-lg px-4">Try the Predictor</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-center text-white py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">© 2023 Grocery Churn Predictor. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="/webjars/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

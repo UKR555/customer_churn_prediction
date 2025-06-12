@@ -1,0 +1,51 @@
+CustomerID,Age,Gender,Income,ShoppingFrequency,AvgBasketValue,LoyaltyCardMember,OnlineShoppingUsage,DaysLastPurchase,TotalPurchaseAmount,TotalVisits,ComplaintsMade,SpecialOffersRedeemed,FeedbackScore,PreferredPaymentMethod,PreferredStoreLocation,Churn
+1001,34,Male,65000,Weekly,85.50,Yes,Medium,3,2500,52,0,12,4.5,Credit Card,Downtown,No
+1002,55,Female,48000,Biweekly,60.75,Yes,Low,14,1800,26,1,8,3.8,Debit Card,Suburb,No
+1003,29,Female,72000,Weekly,95.20,Yes,High,5,2800,48,0,15,4.7,Credit Card,Downtown,No
+1004,42,Male,58000,Monthly,120.40,No,Low,28,1400,12,2,4,3.5,Cash,Suburb,Yes
+1005,61,Male,85000,Biweekly,150.60,Yes,Medium,10,3600,24,0,10,4.2,Credit Card,Downtown,No
+1006,25,Female,35000,Monthly,45.30,No,Medium,32,500,10,1,2,3.0,Debit Card,Suburb,Yes
+1007,48,Female,92000,Weekly,110.75,Yes,High,4,5200,50,0,20,4.8,Credit Card,Downtown,No
+1008,37,Male,52000,Biweekly,70.25,Yes,Low,12,1700,24,1,5,3.5,Debit Card,Mall,Yes
+1009,52,Female,64000,Weekly,88.50,Yes,Medium,7,4100,48,0,18,4.5,Credit Card,Mall,No
+1010,31,Male,38000,Monthly,50.20,No,Low,35,600,12,3,3,2.8,Cash,Suburb,Yes
+1011,45,Female,75000,Biweekly,95.75,Yes,High,8,2300,24,0,9,4.0,Credit Card,Downtown,No
+1012,58,Male,110000,Weekly,180.50,Yes,Medium,2,9100,52,0,25,4.9,Credit Card,Downtown,No
+1013,33,Female,43000,Monthly,65.40,No,Low,40,800,12,2,4,3.2,Debit Card,Suburb,Yes
+1014,27,Male,51000,Biweekly,72.30,Yes,Medium,15,1750,24,1,7,3.7,Debit Card,Mall,No
+1015,39,Female,68000,Weekly,90.60,Yes,High,5,4600,48,0,16,4.6,Credit Card,Downtown,No
+1016,47,Male,59000,Monthly,110.20,No,Low,38,1350,12,3,5,3.0,Cash,Suburb,Yes
+1017,62,Female,95000,Biweekly,130.75,Yes,Medium,9,3150,24,0,12,4.3,Credit Card,Downtown,No
+1018,29,Male,41000,Monthly,55.80,No,Medium,30,670,10,1,3,3.1,Debit Card,Suburb,Yes
+1019,51,Female,88000,Weekly,115.40,Yes,High,6,5900,50,0,22,4.7,Credit Card,Downtown,No
+1020,36,Male,53000,Biweekly,68.90,Yes,Low,18,1650,22,1,6,3.6,Debit Card,Mall,Yes
+1021,44,Female,67000,Weekly,92.30,Yes,Medium,4,4800,48,0,17,4.4,Credit Card,Mall,No
+1022,32,Male,39000,Monthly,48.75,No,Low,42,580,12,2,2,2.7,Cash,Suburb,Yes
+1023,46,Female,76000,Biweekly,98.50,Yes,High,7,2400,24,0,10,4.1,Credit Card,Downtown,No
+1024,59,Male,115000,Weekly,175.60,Yes,Medium,3,9000,52,0,24,4.8,Credit Card,Downtown,No
+1025,28,Female,42000,Monthly,62.80,No,Low,45,750,10,3,3,3.0,Debit Card,Suburb,Yes
+1026,38,Male,56000,Biweekly,75.40,Yes,Medium,14,1800,24,1,8,3.9,Debit Card,Mall,No
+1027,50,Female,82000,Weekly,105.20,Yes,High,5,5400,48,0,19,4.5,Credit Card,Downtown,No
+1028,35,Male,49000,Monthly,100.10,No,Low,36,1200,12,2,4,3.3,Cash,Suburb,Yes
+1029,63,Female,98000,Biweekly,140.30,Yes,Medium,8,3400,24,0,14,4.4,Credit Card,Downtown,No
+1030,26,Male,37000,Monthly,52.40,No,Medium,33,630,10,1,2,3.0,Debit Card,Suburb,Yes
+1031,53,Female,89000,Weekly,118.70,Yes,High,4,6100,50,0,21,4.6,Credit Card,Downtown,No
+1032,40,Male,61000,Biweekly,82.50,Yes,Low,16,2000,22,1,7,3.8,Debit Card,Mall,No
+1033,49,Female,72000,Weekly,96.80,Yes,Medium,6,4700,48,0,18,4.5,Credit Card,Mall,No
+1034,30,Male,40000,Monthly,49.60,No,Low,39,600,12,3,2,2.9,Cash,Suburb,Yes
+1035,43,Female,69000,Biweekly,91.40,Yes,High,11,2200,24,0,9,4.0,Credit Card,Downtown,No
+1036,56,Male,105000,Weekly,160.30,Yes,Medium,3,8300,52,0,23,4.8,Credit Card,Downtown,No
+1037,31,Female,44000,Monthly,68.20,No,Low,44,820,10,2,3,3.2,Debit Card,Suburb,Yes
+1038,41,Male,63000,Biweekly,81.70,Yes,Medium,13,1950,24,1,8,3.7,Debit Card,Mall,No
+1039,54,Female,86000,Weekly,112.50,Yes,High,5,5800,48,0,20,4.7,Credit Card,Downtown,No
+1040,33,Male,47000,Monthly,95.30,No,Low,37,1150,12,2,4,3.1,Cash,Suburb,Yes
+1041,60,Female,93000,Biweekly,125.80,Yes,Medium,9,3050,24,0,11,4.2,Credit Card,Downtown,No
+1042,27,Male,38000,Monthly,54.60,No,Medium,31,650,10,1,3,3.0,Debit Card,Suburb,Yes
+1043,52,Female,87000,Weekly,116.90,Yes,High,4,6000,50,0,23,4.8,Credit Card,Downtown,No
+1044,39,Male,60000,Biweekly,79.40,Yes,Low,17,1900,22,1,6,3.6,Debit Card,Mall,No
+1045,48,Female,71000,Weekly,94.20,Yes,Medium,7,4600,48,0,17,4.4,Credit Card,Mall,No
+1046,29,Male,39000,Monthly,47.80,No,Low,41,580,12,3,2,2.8,Cash,Suburb,Yes
+1047,42,Female,68000,Biweekly,90.10,Yes,High,10,2100,24,0,8,3.9,Credit Card,Downtown,No
+1048,57,Male,108000,Weekly,170.50,Yes,Medium,2,8800,52,0,24,4.9,Credit Card,Downtown,No
+1049,32,Female,45000,Monthly,70.30,No,Low,43,840,10,2,3,3.3,Debit Card,Suburb,Yes
+1050,40,Male,62000,Biweekly,80.60,Yes,Medium,12,1900,24,1,7,3.8,Debit Card,Mall,No 
